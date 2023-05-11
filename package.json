@@ -1,0 +1,16 @@
+{
+	"name": "firebase-functions-deploy-fail",
+	"type": "module",
+	"scripts": {
+		"build": "tsx ./app/build.ts",
+		"deploy": "cd app/dist && firebase deploy --only functions:hello_world --project mailvideo-test",
+		"build-deploy": "pnpm run build && pnpm run deploy"
+	},
+	"devDependencies": {
+		"esbuild": "^0.17.18",
+		"firebase-functions": "^4.4.0",
+		"firebase-tools": "11.17.0",
+		"tsx": "^3.12.7",
+		"typescript": "^5.0.4"
+	}
+}
